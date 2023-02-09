@@ -1,0 +1,71 @@
+html,
+body {
+  height: 99%;
+  --tooltip-color: rgba(78, 75, 72, 0.85);
+}
+
+#svg-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+svg {
+  margin: auto;
+  display: block;
+}
+
+#title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#description {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#tooltip {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  opacity: 0%;
+  background-color: var(--tooltip-color);
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#tooltip::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid var(--tooltip-color);
+  border-bottom: 5px solid transparent;
+  left: -9px;
+  top: 9px;
+}
+
+.legendText {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+footer {
+  position: relative;
+  font-size: small;
+  font-style: italic;
+  width: 99%;
+  font-weight: 600;
+  bottom: 7px;
+  margin-top: 15px;
+  text-align: center;
+}
