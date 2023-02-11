@@ -45,7 +45,7 @@ function buildChoroplethMap() {
     .domain([d3.min(dataEducation, (d) => d.bachelorsOrHigher), d3.max(dataEducation, (d) => d.bachelorsOrHigher)])
     .interpolator(d3.interpolateYlGn);
 
-  // ------------------Bar Chart-----------------
+  // ------------------Choropleth map-----------------
 
   let tooltip = d3.select("body").append("div").attr("id", "tooltip");
   svg
